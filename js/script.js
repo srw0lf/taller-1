@@ -101,12 +101,12 @@ switch(opera){
             console.log(`El resultado de la multiplicacion es ${multiplica}`);
             break;
                 case 'dividir':
-                console.log(`El resultado de la divicion es ${divide}`);
+                console.log(`El resultado de la divicion es ${divide.toFixed(2)}`);
                 break;
                     case 'potencia':
-                    console.log(`El resultado elevado a la potencia es ${poten}`);
+                    console.log(`El resultado elevado a la potencia es ${poten.toFixed(2)}`);
                     break;
                         case 'raiz cuadrada':
-                        console.log(`La Raiz cuadrada de ${num1} es ${raiz} `)
+                        console.log(`La Raiz cuadrada de ${num1} es ${raiz.toFixed(2)} `)
 }
 
