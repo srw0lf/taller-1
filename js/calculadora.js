@@ -4,6 +4,18 @@ function calcular(){
     let op=document.getElementById("operacion").value;
     if(op==1){
         let res=num1+num2;
-        alert(`El numero 1 es ${num1} y el nunmero dos ${num2} la suma es ${res}`)
+        alert(`El numero 1 es ${num1} y el numero 2 ${num2} la suma es ${res}`)
+    }
+    else if (op=2){
+        let res=num1-num2;
+        alert(`El numero 1 es ${num1} y el numero 2 ${num2} la resta es ${res}`)
+    }
+    else if (op=3){
+        let res=num1*num2;
+        alert(`El numero 1 es ${num1} y el numero 2 ${num2} la multiplicacion es ${res}`)
+    }
+    else if (op=4){
+        let res=num1/num2;
+        alert(`El numero 1 es ${num1} y el numero 2 ${num2} la divicion es ${res}`)
     }
 }
