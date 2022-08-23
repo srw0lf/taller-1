@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/styles.css"/>
+        <title>calculadora</title>
+    </head>
+    <body>
+        <div class="login">
+        <center><h1>Java Script</h1>
+        <div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../INDEX.html">Inicio</a></li>
+                    <li><a class="red" href="Ejercicio1.html">Ejercicio 1</a></li>
+                    <li><a class="black" href="Ejercicio2.html">Ejercicio 2</a></li>
+                    <li><a class="black" href="Ejercicio3.html">Ejercicio 3 </a></li>
+                    <li><a class="blue" href="Ejercicio4.html">Ejercicio 4 </a></li>
+                    <li><a class="blue" href="Ejercicio5.html">Ejercicio 5</a></li>		
+                </ul>
+            </nav>
+        </div>  
+    </div> 
+</center>
+    <img class="Logo" src="../IMG/5.png">
+    
+    <form class="form-ejercicios">
+        <div class="group-form">
+            <label for="num1" class="form-label">Ingresa un numero</label><br>
+            <input type="number" class="form-control" id="num1">
+        </div>
+        <div class="group-form">
+            <label for="num2" class="form-label">Ingresa otro numero</label><br>
+            <input type="number" class="form-control" id="num2">
+        </div>
+        <div class="group-form">
+            <label>Seleccione una operacion</label><br>
+            <select class="form-select" id="operacion">
+                <option value="1">Suma</option>
+                <option value="2">Resta</option>
+                <option value="3">Multiplicacion</option>
+                <option value="4">Division</option>
+            </select>
+        </div>
+        <button type="submit" class="bo" onclick="calcular()">ACEPTAR</button>
+    </form>
+    <script src="../js/calculadora.js"></script>
+    
+    </body>
+</html>
