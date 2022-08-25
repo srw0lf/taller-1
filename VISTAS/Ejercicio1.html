@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/styles.css"/>
+        <link rel="stylesheet" href="https://fontawesome.com/icons/x?s=solid">
         <title>calculadora</title>
     </head>
     <body>
@@ -37,14 +38,20 @@
         <div class="group-form">
             <label>Seleccione una operacion</label><br>
             <select class="form-select" id="operacion">
-                <option value="1">Suma</option>
-                <option value="2">Resta</option>
-                <option value="3">Multiplicacion</option>
-                <option value="4">Division</option>
+                <option id="1">Suma</option>
+                <option id="2">Resta</option>
+                <option id="3">Multiplicacion</option>
+                <option id="4">Division</option>
             </select>
         </div>
-        <button type="submit" class="bo" onclick="calcular()">ACEPTAR</button>
+        <button type="submit" id="button">ACEPTAR</button>
     </form>
+    <div id="ops" >
+        <button  id="suma">Suma</button>
+        <button id="resta">Resta</button>
+    </div>
+    <div id="respuesta">
+    </div>
     <script src="../js/calculadora.js"></script>
     
     </body>
