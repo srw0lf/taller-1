@@ -11,6 +11,14 @@ const reglas={
     correo:/^[a-zA-Z0-9_+-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,//correo
     password:/^(?=.+\d)(?=.*[#$%&!@])(?=.*[a-z])(?=.*[A-Z]).{8,}$/ //password
 }
+const inputs={
+    numdoc:false,
+    nombre:false,
+    apellido:false,
+    correo:false,
+    telefono:false,
+    password:false
+}
 //acceder al formulario
 let form= document.getElementById("frm-usuario");
 let campos=document.querySelectorAll("#frm-usuario input");
@@ -26,13 +34,15 @@ const validarInput=(regla,input,grupo)=>{
         document.querySelector(`#g-${grupo} i`).classList.add('fa-bomb');
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-circle-xmark');
         document.querySelector(`#g-${grupo} .msn-error`).classList.remove('msn-error-visible');
+        inputs[grupo]=true;  
     }
     else{
         document.getElementById(`g-${grupo}`).classList.add('error');
         document.getElementById(`g-${grupo}`).classList.remove('success');
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-bomb');
         document.querySelector(`#g-${grupo} i`).classList.add('fa-circle-xmark');
-        document.querySelector('#g-${grupo} .msn-error').classList.add('msn-error-visible');
+        document.querySelector(`#g-${grupo} .msn-error`).classList.add('msn-error-visible');
+        inputs[grupo]=false;  
  }
 }
 
@@ -68,4 +78,21 @@ campos.forEach((campo)=>{
     campo.addEventListener("keyup",validarCampos);
     //detecta cuando da click por fuera
     campo.addEventListener("blur",validarCampos);
+})
+form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const terminos=document.getElementById("terminos");
+    if(inputs.numdoc && inputs.nombre && inputs.apellido && inputs.correo && inputs.telefono && inputs.password && terminos.checked){
+    alert("el usuario a sido registrado");
+    form.reset()
+    document.querySelectorAll('.success').forEach(inono=>{
+        icono.classList.remove('success')
+    })
+}
+else{
+    alert("el registro eta mal")
+    document.querySelectorAll('.success').forEach(inono=>{
+        icono.classList.remove('error')
+    })
+}
 })
