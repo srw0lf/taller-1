@@ -1,0 +1,88 @@
+
+body{
+    background-image: url(../img/11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Itim',cursive;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+}
+/*Estilos del formulario*/
+.frm-container{
+    background-color: black;
+    max-width: 40rem;
+    width: 100%;
+    color: beige;
+    padding: 2rem;
+    margin: 50px auto;
+    border-radius: 5%;
+}
+.frm-input{
+    width: 100%;
+    min-height: 2rem;
+    padding:  0 1rem;
+    box-shadow: 4px ;
+    margin-top: 1rem;
+}
+.frm-input:focus{
+    outline: none;
+    border-color:aqua;
+    border-width: 2px;
+    border-style: solid;
+}
+#g-terminos{
+    display: flex;
+    justify-content: center;
+}
+.frm-checkbox{
+    margin: 1rem;
+}
+.btn-enviar{
+    background:linear-gradient(aqua,black);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100;
+}
+.btn-enviar:hover{
+    background: linear-gradient(black,aqua);
+
+}
+.msn-error{
+    font-size: 11px;
+    color: aqua;
+    opacity: 0;
+}
+.form-group{
+    margin: 0.5rem 0;
+}
+label{
+    font-weight: 500;
+}
+.form-group-input{
+    position: relative;
+}
+.frm-icono{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 2rem;
+    color: rgb(0, 0, 0);
+    z-index: 100;
+}
+.success .frm-icono{
+    color: greenyellow;
+}
+
+.error .frm-icono{
+    color: red;
+}
+
+.msn-error-visible{
+    visibility: visible;
+    opacity: 1;
+}
