@@ -286,3 +286,7 @@ let opr=base*altura/2
 text=`<p>El resultado es ${opr} cm<sup>2</sup></p>`
 rta.innerHTML=text
 })
+
+
+
+
